@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!-- Prosthetic Spine -->
+    
+<HediffDef ParentName="AddedBodyPartBase">
+    <defName>ISA_SimpleProstheticSpine</defName>
+    <label>prosthetic spine</label>
+    <labelNoun>a prosthetic spine</labelNoun>
+    <description>An installed prosthetic spine.</description>
+    <descriptionHyperlinks><ThingDef>ISA_SimpleProstheticSpine</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>ISA_SimpleProstheticSpine</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>0.90</partEfficiency>
+    </addedPartProps>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartProstheticMakeableBase">
+    <defName>ISA_SimpleProstheticSpine</defName>
+    <label>prosthetic spine</label>
+    <description>A spine prosthesis. While it lacks a neural interface, its complex arrangement of internal joints allows it to mimic natural movement quite convincingly. Still, it is inferior to a real spine.</description>
+    <descriptionHyperlinks><RecipeDef>ISA_InstallSimpleProstheticSpine</RecipeDef></descriptionHyperlinks>
+    <costList>
+      <Steel>30</Steel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <statBases>
+      <Mass>4</Mass>
+    </statBases>
+    <techHediffsTags>
+      <li>Simple</li>
+    </techHediffsTags>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
+    <defName>ISA_InstallSimpleProstheticSpine</defName>
+    <label>install prosthetic spine</label>
+    <description>Install a prosthetic spine.</description>
+    <descriptionHyperlinks>
+      <ThingDef>ISA_SimpleProstheticSpine</ThingDef>
+      <HediffDef>ISA_SimpleProstheticSpine</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing prosthetic spine.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ISA_SimpleProstheticSpine</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>ISA_SimpleProstheticSpine</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Spine</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>ISA_SimpleProstheticSpine</addsHediff>
+  </RecipeDef>
+    
+<!--====================================================================================================================================-->
+    
+     <!-- PlasteelClaw -->
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>PlasteelClaw</defName>
+    <label>plasteel claw</label>
+    <labelNoun>a plasteel claw</labelNoun>
+    <description>An installed plasteel claw.</description>
+    <descriptionHyperlinks><ThingDef>PlasteelClaw</ThingDef></descriptionHyperlinks>
+    <addedPartProps>
+      <solid>true</solid>
+    </addedPartProps>
+     <stages>
+      <li>
+        <statOffsets>
+            <MiningSpeed>1.2</MiningSpeed>
+        </statOffsets>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.08</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_VerbGiver">
+        <tools>
+          <li>
+            <label>claw</label>
+            <capacities>
+              <li>Scratch</li>
+            </capacities>
+            <power>20</power>  
+            <armorPenetration>0.2</armorPenetration>
+            <cooldownTime>1.8</cooldownTime>
+            <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+            <soundMeleeHit>MeleeHit_BionicSlash</soundMeleeHit>
+            <soundMeleeMiss>MeleeMiss_BionicSlash</soundMeleeMiss>
+          </li>
+        </tools>
+      </li>
+    </comps>
+    <spawnThingOnRemoved>PlasteelClaw</spawnThingOnRemoved>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartProstheticMakeableBase">
+    <defName>PlasteelClaw</defName>
+    <label>plasteel claw</label>
+    <description>A razor-sharp talon which extends from a hidden opening between the fingers. The claw is longer than the palm, but it becomes flexible upon retracting, allowing the user to curl it up and conceal it inside the hand. It can perform rapid slashing attacks. It is hard enough to speed up mining operations.</description>
+    <descriptionHyperlinks><RecipeDef>InstallPlasteelClaw</RecipeDef></descriptionHyperlinks>
+    <thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+    <costList>
+      <Plasteel>10</Plasteel>
+      <Steel>40</Steel>
+      <ComponentIndustrial>5</ComponentIndustrial>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>Prosthetics</researchPrerequisite>
+    </recipeMaker>
+    <violentTechHediff>true</violentTechHediff>
+    <techHediffsTags>
+      <li>AdvancedWeapon</li>
+    </techHediffsTags>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallImplantBase">
+    <defName>InstallPlasteelClaw</defName>
+    <label>install plasteel claw</label>
+    <description>Install a plasteel claw.</description>
+    <descriptionHyperlinks>
+      <ThingDef>PlasteelClaw</ThingDef>
+      <HediffDef>PlasteelClaw</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing plasteel claw.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>PlasteelClaw</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>PlasteelClaw</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Hand</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>PlasteelClaw</addsHediff>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+    <defName>RemovePlasteelClaw</defName>
+    <label>remove plasteel claw</label>
+    <description>Remove plasteel claw.</description>
+    <descriptionHyperlinks>
+      <ThingDef>PlasteelClaw</ThingDef>
+      <HediffDef>PlasteelClaw</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Removing plasteel claw.</jobString>
+    <removesHediff>PlasteelClaw</removesHediff>
+  </RecipeDef>
+    
+<!--====================================================================================================================================-->
+
+     <!-- PlasmaClaw -->
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>PlasmaClaw</defName>
+    <label>plasma claw</label>
+    <labelNoun>a plasma claw</labelNoun>
+    <description>An installed plasma claw.</description>
+    <descriptionHyperlinks><ThingDef>PlasmaClaw</ThingDef></descriptionHyperlinks>
+    <addedPartProps>
+      <solid>true</solid>
+    </addedPartProps>
+     <stages>
+      <li>
+        <statOffsets>
+            <MiningSpeed>1.30</MiningSpeed>
+        </statOffsets>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.08</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_VerbGiver">
+        <tools>
+          <li>
+            <label>claw</label>
+            <capacities>
+              <li>Scratch</li>
+            </capacities>
+            <power>20</power>
+            <armorPenetration>0.2</armorPenetration>
+            <cooldownTime>1.8</cooldownTime>
+            <extraMeleeDamages>
+              <li>
+                <def>Burn</def>
+                <amount>10</amount>
+                <chance>0.25</chance>
+              </li>
+            </extraMeleeDamages>
+            <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+            <soundMeleeHit>MeleeHit_BionicSlash</soundMeleeHit>
+            <soundMeleeMiss>MeleeMiss_BionicSlash</soundMeleeMiss>
+          </li>
+        </tools>
+      </li>
+    </comps>
+    <spawnThingOnRemoved>PlasmaClaw</spawnThingOnRemoved>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartBionicBase">
+    <defName>PlasmaClaw</defName>
+    <label>plasma claw</label>
+    <description>A razor-sharp talon which extends from a hidden opening between the fingers. The claw is longer than the palm, but it becomes flexible upon retracting, allowing the user to curl it up and conceal it inside the hand. It can perform rapid slashing attacks. It is hard enough to speed up mining operations.</description>
+    <descriptionHyperlinks><RecipeDef>InstallPlasmaClaw</RecipeDef></descriptionHyperlinks>
+    <thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+    <costList>
+      <Plasteel>15</Plasteel>
+      <Steel>40</Steel>
+      <ComponentIndustrial>5</ComponentIndustrial>
+      <Chemfuel>25</Chemfuel>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>Bionics</researchPrerequisite>
+    </recipeMaker>
+    <violentTechHediff>true</violentTechHediff>
+    <techHediffsTags>
+      <li>AdvancedWeapon</li>
+    </techHediffsTags>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallImplantBase">
+    <defName>InstallPlasmaClaw</defName>
+    <label>install plasma claw</label>
+    <description>Install a plasma claw.</description>
+    <descriptionHyperlinks>
+      <ThingDef>PlasmaClaw</ThingDef>
+      <HediffDef>PlasmaClaw</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing plasma claw.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>PlasmaClaw</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>PlasmaClaw</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Hand</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>PlasmaClaw</addsHediff>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+    <defName>RemovePlasmaClaw</defName>
+    <label>remove plasma claw</label>
+    <description>Remove plasma claw.</description>
+    <descriptionHyperlinks>
+      <ThingDef>PlasmaClaw</ThingDef>
+      <HediffDef>PlasmaClaw</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Removing plasma claw.</jobString>
+    <removesHediff>PlasmaClaw</removesHediff>
+  </RecipeDef>
+    
+<!--====================================================================================================================================-->
+
+     <!-- ExtendedWindpipe -->
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>ExtendedWindpipe</defName>
+    <label>extended windpipe</label>
+    <labelNoun>an extended windpipe</labelNoun>
+    <description>An extended windpipe.</description>
+    <descriptionHyperlinks><ThingDef>ExtendedWindpipe</ThingDef></descriptionHyperlinks>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.15</partEfficiency>
+    </addedPartProps>
+    <spawnThingOnRemoved>ExtendedWindpipe</spawnThingOnRemoved>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartBionicBase">
+    <defName>ExtendedWindpipe</defName>
+    <label>extended windpipe</label>
+    <description>An augmentation inspired by the observation of insectoids that connects the lungs with the outside world thanks to an additional windpipe allowing the user a greater oxygen intake.</description>
+    <descriptionHyperlinks><RecipeDef>InstallExtendedWindpipe</RecipeDef></descriptionHyperlinks>
+    <thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+    <costList>
+      <Plasteel>10</Plasteel>
+      <Steel>30</Steel>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>Bionics</researchPrerequisite>
+    </recipeMaker>
+    <violentTechHediff>true</violentTechHediff>
+    <techHediffsTags>
+
+    </techHediffsTags>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallImplantBase">
+    <defName>InstallExtendedWindpipe</defName>
+    <label>install extended windpipe</label>
+    <description>Install an extended windpipe.</description>
+    <descriptionHyperlinks>
+      <ThingDef>ExtendedWindpipe</ThingDef>
+      <HediffDef>ExtendedWindpipe</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing extended windpipe.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ExtendedWindpipe</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>ExtendedWindpipe</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Lung</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>ExtendedWindpipe</addsHediff>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+    <defName>RemoveExtendedWindpipe</defName>
+    <label>remove extended windpipe</label>
+    <description>Remove extended windpipe.</description>
+    <descriptionHyperlinks>
+      <ThingDef>ExtendedWindpipe</ThingDef>
+      <HediffDef>ExtendedWindpipe</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Removing extended windpipe.</jobString>
+    <removesHediff>ExtendedWindpipe</removesHediff>
+  </RecipeDef>
+</Defs>
