@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+<!-- Add cryofuel recipe to biofuel refinery -->
+  
+<Operation Class="PatchOperationAdd">
+  <xpath>/Defs/ThingDef[defName="BiofuelRefinery"]/recipes</xpath>
+  <value>
+    <li>ISA_Make_CryofuelFromNeutroamine</li>
+  </value>
+</Operation>
+  
+</Patch>
