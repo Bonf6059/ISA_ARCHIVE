@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+  <RecipeDef>
+    <defName>ISA_Make_CryofuelFromNeutroamine</defName>
+    <label>make cryofuel from neutroamine</label>
+    <description>Make a batch of cryofuel by extracting and condensing neutroamine gas.</description>
+    <jobString>Refining cryofuel from neutroamine.</jobString>
+    <effectWorking>Cremate</effectWorking>
+    <soundWorking>Recipe_Cremate</soundWorking>
+    <workAmount>2000</workAmount>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Neutroamine</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Neutroamine</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <ISA_Cryofuel>5</ISA_Cryofuel>
+    </products>
+  </RecipeDef>
+
+</Defs>
