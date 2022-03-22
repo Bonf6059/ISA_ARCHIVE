@@ -366,4 +366,406 @@
     <jobString>Removing extended windpipe.</jobString>
     <removesHediff>ExtendedWindpipe</removesHediff>
   </RecipeDef>
+    
+<!--====================================================================================================================================-->
+    
+      <!-- Clockwork Leg -->
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>ISA_ClockworkLeg</defName>
+    <label>Clockwork leg</label>
+    <labelNoun>a clockwork leg</labelNoun>
+    <description>An installed clockwork leg.</description>
+    <descriptionHyperlinks><ThingDef>ISA_ClockworkLeg</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>ISA_ClockworkLeg</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.15</partEfficiency>
+    </addedPartProps>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartProstheticMakeableBase">
+    <defName>ISA_ClockworkLeg</defName>
+    <label>clockwork leg </label>
+    <description>A clockwork leg prosthesis. It has an industrial look, its complex arrangement of internal joints allows it to mimic natural movement quite convincingly. Its large amount of moving components makes anyone wonder if they are really needed or are just decorative.</description>
+    <descriptionHyperlinks><RecipeDef>ISA_InstallClockworkLeg</RecipeDef></descriptionHyperlinks>
+    <costList>
+      <Steel>50</Steel>
+      <ComponentIndustrial>5</ComponentIndustrial>
+    </costList>
+    <statBases>
+      <Mass>8</Mass>
+    </statBases>
+    <techHediffsTags>
+      <li>Simple</li>
+    </techHediffsTags>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
+    <defName>ISA_InstallClockworkLeg</defName>
+    <label>install clockwork leg</label>
+    <description>Install a clockwork leg.</description>
+    <descriptionHyperlinks>
+      <ThingDef>ISA_ClockworkLeg</ThingDef>
+      <HediffDef>ISA_ClockworkLeg</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing clockwork leg.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ISA_ClockworkLeg</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>ISA_ClockworkLeg</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Leg</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>ISA_ClockworkLeg</addsHediff>
+  </RecipeDef>
+
+<!--====================================================================================================================================-->
+    
+  <!-- Clockwork arm -->
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>ISA_ClockworkArm</defName>
+    <label>clockwork arm</label>
+    <labelNoun>a clockwork arm</labelNoun>
+    <description>An installed clockwork arm.</description>
+    <descriptionHyperlinks><ThingDef>ISA_ClockworkArm</ThingDef></descriptionHyperlinks>
+    <comps>
+      <li Class="HediffCompProperties_VerbGiver">
+        <tools>
+          <li>
+            <label>fist</label>
+            <capacities>
+              <li>Blunt</li>
+            </capacities>
+            <power>9</power> <!-- Bit stronger than natural fist -->
+            <cooldownTime>2</cooldownTime>
+          </li>
+        </tools>
+      </li>
+    </comps>
+    <spawnThingOnRemoved>ISA_ClockworkArm</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.10</partEfficiency>
+    </addedPartProps>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartProstheticMakeableBase">
+    <defName>ISA_ClockworkArm</defName>
+    <label>clockwork arm</label>
+    <description>A clockwork arm prosthesis. It has an industrial look, its complex arrangement of internal joints allows it to mimic natural movement quite convincingly. Its large amount of moving components makes anyone wonder if they are really needed or are just decorative.</description>
+    <descriptionHyperlinks><RecipeDef>ISA_InstallClockworkArm</RecipeDef></descriptionHyperlinks>
+    <costList>
+      <Steel>40</Steel>
+      <ComponentIndustrial>5</ComponentIndustrial>
+    </costList>
+    <statBases>
+      <Mass>5</Mass>
+    </statBases>
+    <techHediffsTags>
+      <li>Simple</li>
+    </techHediffsTags>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
+    <defName>ISA_InstallClockworkArm</defName>
+    <label>install clockwork arm</label>
+    <description>Install a clockwork arm.</description>
+    <descriptionHyperlinks>
+      <ThingDef>ISA_ClockworkArm</ThingDef>
+      <HediffDef>ISA_ClockworkArm</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing clockwork arm.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ISA_ClockworkArm</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>ISA_ClockworkArm</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Shoulder</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>ISA_ClockworkArm</addsHediff>
+  </RecipeDef>
+
+<!--====================================================================================================================================-->
+    
+  <!-- Grappling Hand -->
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>ISA_Grapplinghand</defName>
+    <label>grappling hand</label>
+    <labelNoun>a grappling hand</labelNoun>
+    <description>An installed grappling hand.</description>
+    <descriptionHyperlinks><ThingDef>ISA_Grapplinghand</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>ISA_Grapplinghand</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.05</partEfficiency>
+    </addedPartProps>
+    <stages>
+      <li>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.04</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartProstheticMakeableBase">
+    <defName>ISA_Grapplinghand</defName>
+    <label>grappling hand</label>
+    <description>An implant which replaces normal hearing. An external microphone transmits a sound signal to electrodes wrapped around the inner ear's auditory sensing nerves. The electrodes stimulate the nerves according to the sound, creating a sensation of hearing. It's not as good as a natural ear, but it's a lot better than being deaf.</description>
+    <descriptionHyperlinks><RecipeDef>InstallCochlearImplant</RecipeDef></descriptionHyperlinks>
+    <costList>
+      <Steel>25</Steel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <techHediffsTags>
+      <li>Simple</li>
+    </techHediffsTags>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
+    <defName>ISA_InstallGrapplinghand</defName>
+    <label>install grappling hand</label>
+    <description>Install a grappling hand.</description>
+    <descriptionHyperlinks>
+      <ThingDef>ISA_Grapplinghand</ThingDef>
+      <HediffDef>ISA_Grapplinghand</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing grappling hand.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ISA_Grapplinghand</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>ISA_Grapplinghand</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Hand</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>ISA_Grapplinghand</addsHediff>
+  </RecipeDef>
+    
+<!--====================================================================================================================================-->
+    
+    <!-- Magnifying eye -->
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>ISA_MagnifyingEye</defName>
+    <label>magnifying eye</label>
+    <labelNoun>a magnifying eye</labelNoun>
+    <description>An installed magnifying eye.</description>
+    <descriptionHyperlinks><ThingDef>ISA_MagnifyingEye</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>ISA_MagnifyingEye</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.10</partEfficiency>
+    </addedPartProps>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartProstheticMakeableBase">
+    <defName>ISA_MagnifyingEye</defName>
+    <label>magnifying eye </label>
+    <description>A magnifying eye. Despite what it seems this eye doesn't replace any important part of the eye. It works like a magnifying glass.</description>
+    <descriptionHyperlinks><RecipeDef>ISA_InstallMagnifyingEye</RecipeDef></descriptionHyperlinks>
+    <costList>
+      <Steel>20</Steel>
+    </costList>
+    <statBases>
+      <Mass>2</Mass>
+    </statBases>
+    <techHediffsTags>
+      <li>Simple</li>
+    </techHediffsTags>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
+    <defName>ISA_InstallMagnifyingEye</defName>
+    <label>install magnifying eye</label>
+    <description>Install a magnifying eye.</description>
+    <descriptionHyperlinks>
+      <ThingDef>ISA_MagnifyingEye</ThingDef>
+      <HediffDef>ISA_MagnifyingEye</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing magnifying eye.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ISA_MagnifyingEye</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>ISA_MagnifyingEye</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Eye</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>ISA_MagnifyingEye</addsHediff>
+  </RecipeDef>
+  
+<!--====================================================================================================================================-->
+    
+    <!-- Mechanical jaw -->
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>ISA_MechanicalJaw</defName>
+    <label>mechanical jaw</label>
+    <labelNoun>a mechanical jaw</labelNoun>
+    <description>An installed mechanical jaw.</description>
+    <descriptionHyperlinks><ThingDef>ISA_MechanicalJaw</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>ISA_MechanicalJaw</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.10</partEfficiency>
+    </addedPartProps>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartProstheticMakeableBase">
+    <defName>ISA_MechanicalJaw</defName>
+    <label>mechanical jaw </label>
+    <description>A mechanical jaw. This jaw is an hard piece of metal capable of moving thanks to a couple of pistons positioned inside the mout.</description>
+    <descriptionHyperlinks><RecipeDef>ISA_InstallMechanicalJaw</RecipeDef></descriptionHyperlinks>
+    <costList>
+      <Steel>45</Steel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <statBases>
+      <Mass>3</Mass>
+    </statBases>
+    <techHediffsTags>
+      <li>Simple</li>
+    </techHediffsTags>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
+    <defName>ISA_InstallMechanicalJaw</defName>
+    <label>install mechanical jaw</label>
+    <description>Install a mechanical jaw.</description>
+    <descriptionHyperlinks>
+      <ThingDef>ISA_MechanicalJaw</ThingDef>
+      <HediffDef>ISA_MechanicalJaw</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing mechanical jaw.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ISA_MechanicalJaw</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>ISA_MechanicalJaw</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Jaw</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>ISA_MechanicalJaw</addsHediff>
+  </RecipeDef>
+
+<!--====================================================================================================================================-->
+    
+    <!-- Brain Spike--> 
+<HediffDef ParentName="AddedBodyPartBase">
+    <defName>ISA_TortureBrainSpike</defName>
+    <label>brain spike</label>
+    <labelNoun>a brain spike</labelNoun>
+    <description>An installed brain spike.</description>
+    <descriptionHyperlinks><ThingDef>ISA_TortureBrainSpike</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>ISA_TortureBrainSpike</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>0.5</partEfficiency>
+    </addedPartProps>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartProstheticMakeableBase">
+    <defName>ISA_TortureBrainSpike</defName>
+    <label>brain spike</label>
+    <description>A spike that is stuck in your brain. It impares most cognitive processes.</description>
+    <descriptionHyperlinks><RecipeDef>ISA_InstallTortureBrainSpike</RecipeDef></descriptionHyperlinks>
+    <costList>
+      <Steel>15</Steel>
+    </costList>
+    <statBases>
+      <Mass>2</Mass>
+    </statBases>
+    <techHediffsTags>
+      <li>Simple</li>
+    </techHediffsTags>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
+    <defName>ISA_InstallTortureBrainSpike</defName>
+    <label>install brain spike</label>
+    <description>Install a brain spike.</description>
+    <descriptionHyperlinks>
+      <ThingDef>ISA_TortureBrainSpike</ThingDef>
+      <HediffDef>ISA_TortureBrainSpike</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing brain spike.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ISA_TortureBrainSpike</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>ISA_TortureBrainSpike</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Brain</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>ISA_TortureBrainSpike</addsHediff>
+  </RecipeDef>
 </Defs>
