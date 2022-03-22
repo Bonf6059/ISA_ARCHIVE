@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!-- Wound Stabilizer -->
+
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>ISA_WoundStabilizer</defName>
+    <label>wound stabilizer</label>
+    <labelNoun>a wound stabilizer</labelNoun>
+    <description>An installed wound stabilizer implant.</description>
+    <descriptionHyperlinks><ThingDef>ISA_WoundStabilizer</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>ISA_WoundStabilizer</spawnThingOnRemoved>
+    <stages>
+      <li>
+        <naturalHealingFactor>1.35</naturalHealingFactor>
+        <ImmunityGainSpeed>0.10</ImmunityGainSpeed>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartBionicBase">
+    <defName>ISA_WoundStabilizer</defName>
+    <label>wound stabilizer</label>
+    <description>Releases nanomachines and healing factors that speed up wound healing and help dealing with infections. This implant only helps with physical wounds and disease, and does nothing to combat other health problems.</description>
+    <descriptionHyperlinks><RecipeDef>ISA_InstallWoundStabilizer</RecipeDef></descriptionHyperlinks>
+    <thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+    <costList>
+      <Plasteel>30</Plasteel>
+      <ComponentSpacer>5</ComponentSpacer>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>Bionics</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallImplantBase">
+    <defName>ISA_InstallWoundStabilizer</defName>
+    <label>install wound stabilizer</label>
+    <description>Install a wound stabilizer.</description>
+    <descriptionHyperlinks>
+      <ThingDef>ISA_WoundStabilizer</ThingDef>
+      <HediffDef>ISA_WoundStabilizer</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing wound stabilizer.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ISA_WoundStabilizer</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>ISA_WoundStabilizer</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Torso</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>ISA_WoundStabilizer</addsHediff>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+    <defName>ISA_RemoveWoundStabilizer</defName>
+    <label>remove wound stabilizer</label>
+    <description>Remove wound stabilizer.</description>
+    <descriptionHyperlinks>
+      <ThingDef>ISA_WoundStabilizer</ThingDef>
+      <HediffDef>ISA_WoundStabilizer</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Removing wound stabilizer.</jobString>
+    <removesHediff>ISA_WoundStabilizer</removesHediff>
+  </RecipeDef>
+  
+  <!-- Sickle Hand -->
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>ISA_SickledHand</defName>
+    <label>sickle hand</label>
+    <labelNoun>a sickle hand</labelNoun>
+    <description>An installed sickle hand.</description>
+    <descriptionHyperlinks><ThingDef>ISA_SickleHand</ThingDef></descriptionHyperlinks>
+    <addedPartProps>
+      <solid>true</solid>
+    </addedPartProps>
+    <stages>
+      <li>
+        <statOffsets>
+          <PlantWorkSpeed>1.30</PlantWorkSpeed>
+          <PlantHarvestYield>1.15</PlantHarvestYield>
+        </statOffsets>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.08</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_VerbGiver">
+        <tools>
+          <li>
+            <label>knuckle</label>
+            <capacities>
+              <li>Blunt</li>
+            </capacities>
+            <power>9</power>
+            <cooldownTime>2</cooldownTime>
+            <alwaysTreatAsWeapon>false</alwaysTreatAsWeapon>
+            <soundMeleeHit>MeleeHit_FieldHand</soundMeleeHit>
+            <soundMeleeMiss>MeleeMiss_FieldHand</soundMeleeMiss>
+          </li>
+            <label>sickle</label>
+            <capacities>
+              <li>Scratch</li>
+            </capacities>
+            <power>9</power>
+            <cooldownTime>2</cooldownTime>
+            <alwaysTreatAsWeapon>false</alwaysTreatAsWeapon>
+            <soundMeleeHit>MeleeHit_BionicSlash</soundMeleeHit>
+            <soundMeleeMiss>MeleeMiss_BionicSlash</soundMeleeMiss>
+        </tools>
+      </li>
+    </comps>
+    <spawnThingOnRemoved>ISA_SickleHand</spawnThingOnRemoved>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartBionicBase">
+    <defName>ISA_SickleHand</defName>
+    <label>sickle hand</label>
+    <description>A razor-sharp sickle which extends from a hidden opening between the middle and ring fingers. The sickle is longer than the palm, but it becomes flexible upon retracting, allowing the user to curl it up and conceal it inside the hand. It can speed up sowing and will increase the harvest yield. It can also be used as a weapon.</description>
+    <descriptionHyperlinks><RecipeDef>ISA_InstallSickleHand</RecipeDef></descriptionHyperlinks>
+    <thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+    <costList>
+      <Steel>90</Steel>
+      <ComponentIndustrial>5</ComponentIndustrial>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>Bionics</researchPrerequisite>
+    </recipeMaker>
+    <techHediffsTags>
+      <li>ISA_SickleHand</li>
+    </techHediffsTags>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
+    <defName>ISA_InstallSickleHand</defName>
+    <label>install sickle hand</label>
+    <description>Install a sickle hand.</description>
+    <descriptionHyperlinks>
+      <ThingDef>ISA_SickleHand</ThingDef>
+      <HediffDef>ISA_SickleHand</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing sickle hand.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ISA_SickleHand</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>ISA_SickleHand</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Hand</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>ISA_SickleHand</addsHediff>
+  </RecipeDef>
+</Defs>
