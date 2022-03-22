@@ -1,9 +1,9 @@
 # ISA_ARCHIVE
-This will be filled with ideas working and not that have been discarded
+This will be filled with ideas working and not that have been discarded ✔ ❌
                 
                 
                 
-              ✔ #USEFULL LINKS (VEF)❌
+                 #USEFULL LINKS (VEF)
 https://github.com/AndroidQuazar/VanillaExpandedFramework/wiki/Metamorphosis
 
 https://github.com/AndroidQuazar/VanillaExpandedFramework/wiki/Acid-Attacks-and-Acid-Immunity
