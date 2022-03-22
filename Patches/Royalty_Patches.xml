@@ -1,0 +1,35 @@
+
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Ludeon.RimWorld.Royalty</li>
+    </mods>	
+	<match Class="PatchOperationSequence">
+      <operations>
+  
+  
+  
+  
+  <!-- Change research for bionics -->
+  
+  <!-- Wound Stabilizer -->
+  <li Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="ISA_WoundStabilizer"]/recipeMaker/researchPrerequisite</xpath>
+            <value>
+              <researchPrerequisite>HealingFactors</researchPrerequisite>
+            </value>
+  </li>
+  
+  <!-- Sickle hand -->
+  <li Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="ISA_SickleHand"]/recipeMaker/researchPrerequisite</xpath>
+            <value>
+              <researchPrerequisite>SpecializedLimbs</researchPrerequisite>
+            </value>
+  </li>
+
+      </operations>	  
+    </match>		  
+  </Operation>
+</Patch>
