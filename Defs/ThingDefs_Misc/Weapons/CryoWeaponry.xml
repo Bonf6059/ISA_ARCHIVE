@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- CryoSword -->
+	<!-- guarda craftable royalty weapons per vedere cosa manca/non va -->
+	
+ <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+		<defName>ISA_CryoSword</defName>
+		<label>cryosword</label>
+		<description>A baseball bat with spikes nailed into its barrel to make it more lethal. Great improvised weapon for anarchists and zombie slayers.</description>
+		<graphicData>
+			<texPath>Things/Item/Equipment/WeaponMelee/PlasmaSword</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<uiIconScale>1.2</uiIconScale>
+		<techLevel>Industrial</techLevel>
+		<costList>
+		<ISA_Cryofuel>15</ISA_Cryofuel>
+		<Plasteel>35</Plasteel>
+                <ComponentSpacer>4</ComponentSpacer>
+		</costList>
+		<statBases>
+			<WorkToMake>35000</WorkToMake>
+			<Mass>1.0</Mass>
+		</statBases>
+		<equippedAngleOffset>-65</equippedAngleOffset>
+		<recipeMaker>
+			<researchPrerequisite>CryoWeaponry</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>10</Crafting>
+			</skillRequirements>
+			<recipeUsers Inherit="False">
+				<li>TableMachining</li>
+			</recipeUsers>
+		</recipeMaker>
+		<weaponTags>
+			<li>IndustrialMeleeDecent</li>
+		</weaponTags>
+		<tools>
+			<li>
+				<label>handle</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>12</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+      <li>
+        <label>point</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>21</power>
+        <cooldownTime>2.6</cooldownTime>
+        <extraMeleeDamages>
+          <li>
+            <def>Burn</def>
+            <amount>10</amount>
+            <chance>0.25</chance>
+          </li>
+          <li>
+            <def>Frostbite</def>
+            <amount>10</amount>
+            <chance>0.5</chance>
+          </li>
+        </extraMeleeDamages>
+      </li>
+      <li>
+        <label>edge</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>21</power>
+        <cooldownTime>2.6</cooldownTime>
+        <extraMeleeDamages>
+          <li>
+            <def>Burn</def>
+            <amount>10</amount>
+            <chance>0.25</chance>
+          </li>
+          <li>
+            <def>Frostbite</def>
+            <amount>10</amount>
+            <chance>0.5</chance>
+          </li>
+        </extraMeleeDamages>
+			</li>
+		</tools>
+	</ThingDef>
+  
+	<!-- Cryosniper -->
+	
+<ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Cryo_SniperRifle</defName>
+    <label>cryosniper rifle</label>
+    <description>An ancient design of precision sniper rifle. Bolt action. It has an exceptionally long range, great accuracy and good power. Because it's so unwieldy, other weapons outclass it at close range.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/SniperRifle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <weaponClasses>
+      <li>LongShots</li>
+      <li>RangedHeavy</li>
+    </weaponClasses>
+    <recipeMaker>
+      <researchPrerequisite>CryoWeaponry</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <thingSetMakerTags><li>RewardStandardQualitySuper</li></thingSetMakerTags>
+    <statBases>
+      <WorkToMake>45000</WorkToMake>
+      <Mass>4</Mass>
+      <AccuracyTouch>0.50</AccuracyTouch>
+      <AccuracyShort>0.70</AccuracyShort>
+      <AccuracyMedium>0.86</AccuracyMedium>
+      <AccuracyLong>0.88</AccuracyLong>
+      <RangedWeapon_Cooldown>2.0</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>60</Steel>
+      <ComponentIndustrial>8</ComponentIndustrial>
+      <ISA_Cryofuel>25</ISA_Cryofuel>
+    </costList>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>ISA_CryoBullet_SniperRifle</defaultProjectile>
+        <warmupTime>2.2</warmupTime>
+        <range>44.9</range>
+        <soundCast>Shot_SniperRifle</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+    <weaponTags Inherit="False">
+      <li>SniperRifle</li>
+    </weaponTags>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>ISA_CryoBullet_SniperRifle</defName>
+    <label>cryosniper rifle bullet</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Big</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Frostbite</damageDef>
+      <damageAmountBase>12</damageAmountBase>
+      <stoppingPower>1.5</stoppingPower>
+      <speed>100</speed>
+    </projectile>
+  </ThingDef>
+
+
+</Defs>
