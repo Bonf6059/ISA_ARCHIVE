@@ -10,7 +10,7 @@
             <li>PlantFoodRaw</li>
           </categories>
         </filter>
-        <count>0.75</count>
+        <count>0.5</count>
       </li>
     </ingredients>
     <fixedIngredientFilter>
@@ -37,7 +37,7 @@
             <li>PlantFoodRaw</li>
           </categories>
         </filter>
-        <count>3.0</count>
+        <count>2</count>
       </li>
     </ingredients>
     <fixedIngredientFilter>
