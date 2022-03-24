@@ -3,7 +3,7 @@
 
   <!-- NEED A PATCH FOR THE STOVE -->
   
-  <ThingDef ParentName="PlantFoodRawBase">
+  <ThingDef ParentName="MealBase">
     <defName>ISA_VegMilk</defName>
     <label>vegetable milk</label>
     <description>Milk from vegetables.</description>
