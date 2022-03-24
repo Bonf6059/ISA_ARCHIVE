@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <ThingDef Abstract="True" Name="PlantFoodCookedBase" ParentName="PlantFoodRawBase">
+  <ThingDef Abstract="True" Name="VegetarianFoodBase" ParentName="PlantFoodRawBase">
     <ingestible>
       <preferability>RawTasty</preferability>
       <tasteThought></tasteThought>
@@ -19,7 +19,7 @@
     <allowedArchonexusCount>200</allowedArchonexusCount>
   </ThingDef>
   
-  <ThingDef ParentName="PlantFoodCookedBase">
+  <ThingDef ParentName="VegetarianFoodBase">
     <defName>ISA_VegMilk</defName>
     <label>vegetable milk</label>
     <description>Milk from vegetables.</description>
