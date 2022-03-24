@@ -28,7 +28,7 @@
     </graphicData>
     <statBases>
       <WorkToMake>500</WorkToMake>
-      <MarketValue>2.9</MarketValue> <!-- Can be used like meat in recipes -->
+      <MarketValue>2.9</MarketValue>
       <Mass>0.045</Mass>
       <MaxHitPoints>60</MaxHitPoints>
       <Flammability>0.2</Flammability>
