@@ -3,32 +3,17 @@
 
   <!-- NEED A PATCH FOR THE STOVE -->
   
-  <ThingDef Abstract="True" Name="VegetarianFoodBase" ParentName="PlantFoodRawBase">
-    <ingestible>
-      <preferability>RawTasty</preferability>
-      <tasteThought></tasteThought>
-      <ingestEffect>EatVegetarian</ingestEffect>
-      <ingestSound>RawVegetable_Eat</ingestSound>
-    </ingestible>
-    <statBases>
-      <Nutrition>0.05</Nutrition>
-      <FoodPoisonChanceFixedHuman>0.01</FoodPoisonChanceFixedHuman>
-    </statBases>
-    <socialPropernessMatters>true</socialPropernessMatters>
-    <thingCategories>
-      <li>Foods</li>
-    </thingCategories>
-    <allowedArchonexusCount>200</allowedArchonexusCount>
-  </ThingDef>
-  
-  <ThingDef ParentName="VegetarianFoodBase">
+  <ThingDef ParentName="PlantFoodRawBase">
     <defName>ISA_VegMilk</defName>
     <label>vegetable milk</label>
     <description>Milk from vegetables.</description>
     <graphicData>
       <texPath>Things/Item/Resource/Milk</texPath>
     </graphicData>
+    <socialPropernessMatters>true</socialPropernessMatters>
     <statBases>
+      <Nutrition>0.05</Nutrition>
+      <FoodPoisonChanceFixedHuman>0.01</FoodPoisonChanceFixedHuman>
       <WorkToMake>500</WorkToMake>
       <MarketValue>2.9</MarketValue>
       <Mass>0.045</Mass>
@@ -42,8 +27,13 @@
       </li>
     </comps>
     <ingestible>
+      <preferability>RawTasty</preferability>
+      <tasteThought></tasteThought>
       <foodType>VegetableOrFruit, Fluid</foodType>
     </ingestible>
+    <thingCategories>
+      <li>Foods</li>
+    </thingCategories>    
     <allowedArchonexusCount>80</allowedArchonexusCount>
   </ThingDef>
   
