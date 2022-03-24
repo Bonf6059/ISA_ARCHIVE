@@ -6,7 +6,14 @@
 <Operation Class="PatchOperationAdd">
   <xpath>/Defs/ThingDef[defName="FueledStove" or defName="ElectricStove"]/recipes</xpath>
   <value>
-    <li>ISA_VegMilk</li>
+    <li>ISA_CookVegMilk</li>
+  </value>
+</Operation>
+  
+<Operation Class="PatchOperationAdd">
+  <xpath>/Defs/ThingDef[defName="FueledStove" or defName="ElectricStove"]/recipes</xpath>
+  <value>
+    <li>ISA_CookVegMilk_Bulk</li>
   </value>
 </Operation>
   
