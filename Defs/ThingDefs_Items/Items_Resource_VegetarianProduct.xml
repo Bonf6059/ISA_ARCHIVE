@@ -12,9 +12,9 @@
     </graphicData>
     <socialPropernessMatters>true</socialPropernessMatters>
     <statBases>
-      <Nutrition>0.05</Nutrition>
+      <Nutrition>0.13</Nutrition>
       <FoodPoisonChanceFixedHuman>0.01</FoodPoisonChanceFixedHuman>
-      <WorkToMake>500</WorkToMake>
+      <WorkToMake>700</WorkToMake>
       <MarketValue>2.9</MarketValue>
       <Mass>0.045</Mass>
       <MaxHitPoints>60</MaxHitPoints>
