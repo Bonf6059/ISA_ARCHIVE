@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
+  <!-- NEED A PATCH FOR THE STOVE -->
+  
   <ThingDef Abstract="True" Name="VegetarianFoodBase" ParentName="PlantFoodRawBase">
     <ingestible>
       <preferability>RawTasty</preferability>
