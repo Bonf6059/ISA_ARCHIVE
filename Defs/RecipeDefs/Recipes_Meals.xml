@@ -1,0 +1,52 @@
+  <RecipeDef ParentName="CookMealFineBase">
+    <defName>ISA_CookVegMilk</defName>
+    <label>cook vegetarian milk</label>
+    <description>Cook 4 vegetarian milk from plant ingredients.</description>
+    <jobString>Cooking 4 vegetarian milk.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>PlantFoodRaw</li>
+          </categories>
+        </filter>
+        <count>0.75</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <disallowedCategories>
+        <li>MeatRaw</li>
+        <li>AnimalProductRaw</li>
+      </disallowedCategories>
+    </fixedIngredientFilter>
+    <products>
+      <ISA_VegMilk>4</ISA_VegMilk>
+    </products>
+  </RecipeDef>
+
+
+  <RecipeDef ParentName="CookMealFineBulkBase">
+    <defName>ISA_CookVegMilk_Bulk</defName>
+    <label>cook vegetarian milk x4</label>
+    <description>Cook 16 vegetarian milk from plant ingredients. Some of the ingredients are wasted in order to create a good eating experience. Producing varied flavors with plants alone introduces extra inefficiencies.</description>
+    <jobString>Cooking 16 vegetarian milk.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>PlantFoodRaw</li>
+          </categories>
+        </filter>
+        <count>3.0</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <disallowedCategories>
+        <li>MeatRaw</li>
+        <li>AnimalProductRaw</li>
+      </disallowedCategories>
+    </fixedIngredientFilter>
+    <products>
+      <MealFine_Veg>16</MealFine_Veg>
+    </products>
+  </RecipeDef>
