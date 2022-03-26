@@ -1,4 +1,7 @@
-  <RecipeDef ParentName="CookMealFineBase">
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<RecipeDef ParentName="CookMealFineBase">
     <defName>ISA_CookVegMilk</defName>
     <label>cook vegetarian milk</label>
     <description>Cook 4 vegetarian milk from plant ingredients.</description>
@@ -50,3 +53,5 @@
       <MealFine_Veg>16</MealFine_Veg>
     </products>
   </RecipeDef>
+
+</Defs>
