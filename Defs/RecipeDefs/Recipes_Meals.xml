@@ -48,9 +48,10 @@
         <li>MeatRaw</li>
         <li>AnimalProductRaw</li>
       </disallowedCategories>
+      
     </fixedIngredientFilter>
     <products>
-      <MealFine_Veg>16</MealFine_Veg>
+      <ISA_VegMilk>16</ISA_VegMilk>
     </products>
   </RecipeDef>
 
