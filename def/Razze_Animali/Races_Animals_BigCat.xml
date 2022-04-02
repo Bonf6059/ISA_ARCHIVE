@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="BigCatThingBase">
+    <defName>ISA_Cavelion</defName>
+    <label>cave lion</label>
+    <description>An agile and powerful relative of the modern lions. An ambush predator, are masters of taking down both large and small prey. Onlookers tend to focus on their graceful movements, while those in closer contact usually notice their skull-crushing strength. It has been revived by the ancients before their downfall for unknown reasons.</description>
+    <statBases>
+      <ComfyTemperatureMin>-35</ComfyTemperatureMin>
+      <ComfyTemperatureMax>40</ComfyTemperatureMax>
+      <FilthRate>2</FilthRate>
+    </statBases>
+    <race>
+      <wildBiomes>
+        <IceSheet>0.1</IceSheet>
+        <Tundra>0.5</Tundra>
+        <BorealForest>0.7</BorealForest>
+        <TemperateForest>0.2</TemperateForest>
+      </wildBiomes>
+    </race>
+    <tradeTags>
+      <li>AnimalUncommon</li>
+    </tradeTags>
+  </ThingDef>
+
+  <PawnKindDef ParentName="BigCatKindBase">
+    <defName>ISA_Cavelion</defName>
+    <label>cave lion</label>
+    <race>ISA_Cavelion</race>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Cougar/Cougar</texPath>
+          <drawSize>1.05</drawSize>
+          <color>(60,60,60)</color>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Cougar/Dessicated_Cougar</texPath>
+          <drawSize>1.05</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Cougar/Cougar</texPath>
+          <drawSize>1.35</drawSize>
+          <color>(60,60,60)</color>
+          <shadowData>
+            <volume>(0.3, 0.3, 0.3)</volume>
+            <offset>(0,0,-0.3)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Cougar/Dessicated_Cougar</texPath>
+          <drawSize>1.35</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Cougar/Cougar</texPath>
+          <drawSize>2.12</drawSize>
+          <color>(60,60,60)</color>
+          <shadowData>
+            <volume>(0.4, 0.4, 0.4)</volume>
+            <offset>(0,0,-0.1)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Cougar/Dessicated_Cougar</texPath>
+          <drawSize>2.12</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+  
+</Defs>
