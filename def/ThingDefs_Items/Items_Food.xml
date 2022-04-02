@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!--  Fish raw  -->
+	<ThingDef Name="ISA_RawFishBase" Abstract="True" ParentName="OrganicProductBase">
+		<label>Base raw fish properties</label>
+		<comps>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>2</daysToRotStart>
+				<rotDestroys>True</rotDestroys>
+			</li>
+		</comps>
+		<statBases>
+			<Nutrition>0.05</Nutrition>
+			<Flammability>0.5</Flammability>
+			<FoodPoisonChanceFixedHuman>0.1</FoodPoisonChanceFixedHuman>
+
+		</statBases>
+		<ingestible>
+			<foodType>Meat</foodType>
+			<preferability>DesperateOnly</preferability>
+			<ingestEffect>EatMeat</ingestEffect>
+			<ingestSound>RawMeat_Eat</ingestSound>		
+		</ingestible>
+		<thingCategories>
+			<li>MeatRaw</li>
+		</thingCategories>
+	</ThingDef>
+
+
+	<!-- Fished by puffins -->
+
+
+	<ThingDef ParentName="ISA_RawFishBase">
+		<defName>ISA_RawFish</defName>
+		<label>raw fish</label>
+		<description>Raw fish. A resourceful puffin has fished this.</description>
+		<graphicData>
+			<texPath>Things/Item/Resource/AEXP_Fish</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<Mass>0.03</Mass>
+
+			<MarketValue>2</MarketValue>
+		</statBases>
+		<ingestible>
+			<specialThoughtDirect>AteRawFood</specialThoughtDirect>
+		</ingestible>
+	</ThingDef>
+  
+</Defs>
