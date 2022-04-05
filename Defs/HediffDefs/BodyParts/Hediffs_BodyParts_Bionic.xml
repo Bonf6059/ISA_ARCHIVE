@@ -176,4 +176,165 @@
     </appliedOnFixedBodyParts>
     <addsHediff>ISA_SickleHand</addsHediff>
   </RecipeDef>
+  <!-- Insulated skin -->
+
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>ISA_InsulatedSkin</defName>
+    <label>insulated skin</label>
+    <description>Installed insulated skin.</description>
+    <descriptionHyperlinks><ThingDef>ISA_InsulatedSkin</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>ISA_InsulatedSkin</spawnThingOnRemoved>
+    <stages>
+      <li>
+        <statOffsets>
+          <ArmorRating_Sharp>0.15</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.1</ArmorRating_Blunt>
+          <ArmorRating_Heat>0.05</ArmorRating_Heat>
+          <ComfyTemperatureMin>-36</ComfyTemperatureMin>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartBionicBase">
+    <defName>ISA_InsulatedSkin</defName>
+    <label>insulated skin</label>
+    <description>This small patch of artificial skin quickly spreads to cover the user's body. Insulated skin implants provides significant temperature insulation and a bit of extra protection. It looks and feels like natural flesh, but is more resistent to cold temperature. Its common between the arctic dwellers.</description>
+    <descriptionHyperlinks><RecipeDef>ISA_InstallInsulatedSkin</RecipeDef></descriptionHyperlinks>
+    <costList>
+      <Steel>40</Steel>
+      <Plasteel>15</Plasteel>
+      <ComponentIndustrial>5</ComponentIndustrial>
+    </costList>
+    <statBases>
+      <MarketValue>930</MarketValue>
+      <Mass>0.3</Mass>
+    </statBases>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallImplantBase">
+    <defName>ISA_InstallInsulatedSkin</defName>
+    <label>install insulated skin</label>
+    <description>Install insulated skin.</description>
+    <descriptionHyperlinks>
+      <ThingDef>ISA_InsulatedSkin</ThingDef>
+      <HediffDef>ISA_InsulatedSkin</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing insulated skin.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ISA_InsulatedSkin</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>ISA_InsulatedSkin</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Torso</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>ISA_InsulatedSkin</addsHediff>
+    <incompatibleWithHediffTags>
+      <li>ArmorGland</li>
+    </incompatibleWithHediffTags>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+    <defName>ISA_RemoveInsulatedSkin</defName>
+    <label>remove insulated skin</label>
+    <description>Remove insulated skin.</description>
+    <descriptionHyperlinks>
+      <ThingDef>ISA_InsulatedSkin</ThingDef>
+      <HediffDef>ISA_InsulatedSkin</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Removing insulated skin.</jobString>
+    <removesHediff>ISA_InsulatedSkin</removesHediff>
+  </RecipeDef>
+  
+    <!-- Layered skin -->
+
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>ISA_LayeredSkin</defName>
+    <label>layered skin</label>
+    <description>Installed layered skin.</description>
+    <descriptionHyperlinks><ThingDef>ISA_LayeredSkin</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>ISA_LayeredSkin</spawnThingOnRemoved>
+    <stages>
+      <li>
+        <statOffsets>
+          <ArmorRating_Sharp>0.25</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.15</ArmorRating_Blunt>
+          <ArmorRating_Heat>0.1</ArmorRating_Heat>
+	  <ComfyTemperatureMax>14</ComfyTemperatureMax>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartBionicBase">
+    <defName>ISA_LayeredSkin</defName>
+    <label>layered skin</label>
+    <description>This small patch of artificial skin quickly spreads to cover the user's body. Layered skin resists pressure changes and provides significant armor and a bit of temperature insulation. It is harder to damage than steel. Even if it is harmed, it repairs itself over time.</description>
+    <descriptionHyperlinks><RecipeDef>ISA_InstallLayeredSkin</RecipeDef></descriptionHyperlinks>
+    <costList>
+      <Steel>50</Steel>
+      <Plasteel>15</Plasteel>
+      <ComponentSpacer>5</ComponentSpacer>
+    </costList>
+    <statBases>
+      <MarketValue>1350</MarketValue>
+      <Mass>0.3</Mass>
+    </statBases>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallImplantBase">
+    <defName>ISA_InstallLayeredSkin</defName>
+    <label>install layered skin</label>
+    <description>Install layered skin.</description>
+    <descriptionHyperlinks>
+      <ThingDef>ISA_LayeredSkin</ThingDef>
+      <HediffDef>ISA_LayeredSkin</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing layered skin.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ISA_LayeredSkin</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>ISA_LayeredSkin</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Torso</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>ISA_LayeredSkin</addsHediff>
+    <incompatibleWithHediffTags>
+      <li>ArmorGland</li>
+    </incompatibleWithHediffTags>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+    <defName>ISA_RemoveLayeredSkin</defName>
+    <label>remove layered skin</label>
+    <description>Remove layered skin.</description>
+    <descriptionHyperlinks>
+      <ThingDef>ISA_LayeredSkin</ThingDef>
+      <HediffDef>ISA_LayeredSkin</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Removing layered skin.</jobString>
+    <removesHediff>ISA_LayeredSkin</removesHediff>
+  </RecipeDef>
 </Defs>
