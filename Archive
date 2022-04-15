@@ -1,0 +1,10 @@
+<!-- Permette all'animale di scavare dei cadaveri dal terreno -->
+
+<comps>
+  <li Class="AnimalBehaviours.CompProperties_DigWhenHungry">
+       <isFrostmite>true</isFrostmite>
+	     <spawnForbidden>true</spawnForbidden>
+	     <digAnywayEveryXTicks>false</digAnywayEveryXTicks>
+   </li>
+</comps> 
+
