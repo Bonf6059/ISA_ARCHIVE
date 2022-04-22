@@ -7,7 +7,7 @@
 	<match Class="PatchOperationSequence">
       <operations>
         
-	      <!--========== ADD CHITIN TO INSECTOIDS DROPS ==========-->
+	      <!--========== Cactus can grow on sand ==========-->
         
 	<li Class="PatchOperationAdd">
          <xpath>/Defs/ThingDef[defName = "Plant_SaguaroCactus"]/plant</xpath>
