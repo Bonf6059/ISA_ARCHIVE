@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<RecipeDef>
+    <defName>CraftEmptyBucket</defName>
+    <label>craft empty bucket</label>
+    <description>A wooden empty bucket.</description>
+    <jobString>crafting empty bucket.</jobString>
+    <workAmount>250</workAmount>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>WoodLog</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>WoodLog</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <ISA_Empty_Bucket>1</ISA_Empty_Bucket>
+    </products>
+  </RecipeDef>
+  
+</Defs>
