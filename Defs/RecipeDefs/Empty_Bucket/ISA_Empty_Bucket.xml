@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>ISA_Empty_Bucket</defName>
+    <label>empty bucket</label>
+    <description>An empty Bucket</description>
+    <graphicData>
+      <texPath>Things/Item/Empty_Bucket/Empty_Bucket</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.75</drawSize>
+    </graphicData>
+    <stackLimit>150</stackLimit>
+    <statBases>
+      <MarketValue>0.1</MarketValue>
+      <Mass>0.05</Mass>
+      <MaxHitPoints>60</MaxHitPoints>
+      <Flammability>0.75</Flammability>
+    </statBases>
+  </ThingDef>
+  
+</Defs>
